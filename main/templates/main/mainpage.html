@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction</title>
-    <link rel="stylesheet" href="introduction.css">
-</head>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
 <body id="top">
     
     <div class="banner">
         <h1>Welcome!</h1>
         <p id="intro">정민경은 누구일까요</p>
         <a href="#list"><p id="start">start</p></a>
+        <a href="{% url 'bucket' %}" target="_blank"><p id="bucket list">bucket list</p></a>
+        <a href="{% url 'photo' %}" target="_blank"><p id="photo">photo</p></a>
     </div>
 
     <div id="list">
@@ -24,7 +21,7 @@
 
     
     <h2><a id="1. Profile">1. Profile</a></h2>
-    <img src="https://postfiles.pstatic.net/MjAyMTA0MDVfODAg/MDAxNjE3NjE1ODcwMDU1.T1WZcEDIi2qh2ErT9Meu30vc6aSlIjcPjlph8qYKoQYg.xp3OXoR1bAcgTVShbZ1whc8TErU81rITl8CrBt-VM9sg.JPEG.vkslvkd1007/KakaoTalk_20210405_183251512.jpg?type=w966" style="width:300px; height:300px;" alt="프로필 이미지">
+    <img src="{% static 'images/image1.jpg' %}" style="width:300px; height:300px;" alt="프로필 이미지">
         <div id="profile">
             <ul>
                 <li type="disc">이름 : 정민경</li><br>
@@ -87,4 +84,4 @@
     <a href="#top"><div class="top">top</div></a>
     <a href="#list"><div class="list">list</div></a>
 </body>
-</html>
+{% endblock %}

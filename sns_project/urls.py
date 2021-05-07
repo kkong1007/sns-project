@@ -20,5 +20,7 @@ from main import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.showmain),
-    path('show/', views.show)
+    path('show/', views.show),
+    path('bucket/', views.bucket, name="bucket"),
+    path('photo/', views.photo, name="photo"),
 ]

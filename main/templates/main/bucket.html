@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>
+        Bucket List
+    </h2>
+    {% include 'shared/_navbar.html' %}
+    <div class="list-group">
+        <label class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="">
+          조용한 시골에서 한달살기
+        </label>
+        <label class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="">
+          장롱면허 탈출하기
+        </label>
+        <label class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="">
+          주짓수 배우기
+        </label>
+        <label class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="">
+          카페알바 해보기
+        </label>
+        <label class="list-group-item">
+          <input class="form-check-input me-1" type="checkbox" value="">
+          멋사 9기 무사히 수료하기
+        </label>
+        <label class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="">
+            
+          </label>
+      </div>
+{% endblock %}
