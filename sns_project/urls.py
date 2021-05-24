@@ -23,4 +23,7 @@ urlpatterns = [
     path('show/', views.show),
     path('bucket/', views.bucket, name="bucket"),
     path('photo/', views.photo, name="photo"),
+    path('<str:id>',views.detail, name="detail"),
+    path('new/', views.new, name="new"),
+    path('create/', views.create, name="create"),
 ]
