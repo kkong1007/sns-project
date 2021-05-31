@@ -8,8 +8,8 @@
         <h1>Welcome!</h1>
         <p id="intro">정민경은 누구일까요</p>
         <a href="#list"><p id="start">start</p></a>
-        <a href="{% url 'bucket' %}" target="_blank"><p id="bucket list">bucket list</p></a>
-        <a href="{% url 'photo' %}" target="_blank"><p id="photo">photo</p></a>
+        <a href="{% url 'main:bucket' %}" target="_blank"><p id="bucket list">bucket list</p></a>
+        <a href="{% url 'main:photo' %}" target="_blank"><p id="photo">photo</p></a>
     </div>
 
 
@@ -86,7 +86,7 @@
     <a href="#list"><div class="list">list</div></a>
 </body>
 
-<h2><a href="{%url 'new'%}">글쓰기</a></h2>
+<h2><a href="{%url 'main:new'%}">글쓰기</a></h2>
 
 <h1>글 목록</h1>
 <div>
@@ -95,7 +95,7 @@
         <h3>{{post.title}}</h3>
         {{post.writer}}<br>
         {{post.summary}}
-        <a href="{%url 'detail' post.id %}">...more</a>
+        <a href="{%url 'main:detail' post.id %}">...more</a>
         <br>
     </div>
     {%endfor%}

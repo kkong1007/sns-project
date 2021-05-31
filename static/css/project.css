@@ -1,0 +1,246 @@
+body{background-color: lightsteelblue;}
+.banner{
+    margin-top: 150px;
+    padding: 60px;
+    height: 500px;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#intro{
+    text-align: center;
+    color: rgb(54, 52, 52);
+    font-size: 20px;
+}
+
+#start{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: lightgray;
+    border-style: solid;
+    font-size: 30px;
+    left: 47%;
+    position:absolute;
+    color: black;
+    
+}
+
+#start:hover{
+    color:lightgray;
+    background-color: black;
+    transition: 0.8s;
+}
+
+#bucket list{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: lightgray;
+    border-style: solid;
+    font-size: 30px;
+    left: 47%;
+    position:absolute;
+    color: black;
+}
+
+#list{
+    overflow: hidden;
+    text-align: center;
+    color:black;
+    background-color: white;
+    height: 400px;
+    width: 300px;
+    left: 36%;
+    border-radius: 15px;
+    font-size: 30px;
+    line-height: 50px;
+    position: relative;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-style: italic;
+}
+#list a{display: block;}
+
+#list a:hover{background-color: rgba(0, 0, 0, 0.178);}
+
+h2{
+    background-color: rgba(0, 0, 0, 0.185);
+    color: snow;
+    padding-left: 40px;
+    margin-top: 100px;
+}
+
+img{
+    margin-left: 200px;
+    margin-top: 30px;
+    float: left;
+    border-radius: 10px;
+}
+
+#intro{
+    background-color: snow;
+}
+
+#profile ul li{
+    text-align: left;
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 600px;
+    padding-left: 50px;
+    font-size: large;
+}
+
+#hobby ul li{
+    text-align: left;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-left: 50px;
+    font-size: medium;
+    line-height: 50px;
+}
+
+#hobbypicture ul li{
+    display: block;
+    width: 180px;
+    margin-left: 200px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.hobby1{
+    display: block;
+    background-image: url('https://image.flaticon.com/icons/png/128/1158/1158164.png');
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+
+}
+
+.hobby1:hover, .hobby2:hover, .hobby3:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.178);
+    background-image: initial;
+    transition: 0.6s;
+}
+
+.hobby2{
+    display: block;
+    background-image: url('https://image.flaticon.com/icons/png/128/27/27066.png');
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+
+}
+
+.hobby3{
+    display: block;
+    background-image: url('https://image.flaticon.com/icons/png/128/1850/1850532.png');
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+
+}
+
+#hobby, #hobbypicture {
+    display: inline-block;
+}
+
+#likes ul li{
+    text-align: left;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding-left: 50px;
+    font-size:medium;
+    line-height: 50px;
+}
+
+#likespicture ul li{
+    display: block;
+    width:300px;
+    margin-left: 200px;
+    padding-top: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    word-spacing: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.dessert0{
+    display: block;
+    background-image: url('https://image.flaticon.com/icons/png/128/2080/2080447.png');
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+}
+
+.food0{
+    display: block;
+    background-image: url('https://image.flaticon.com/icons/png/128/1046/1046755.png');
+    background-size: contain;
+    color: rgba(0, 0, 0, 0);
+}
+
+.dessert0:hover, .food0:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.178);
+    background-image: initial;
+    transition: 0.6s;
+}
+
+#likes, #likespicture {
+    display: inline-block;
+}
+
+#dislikes ul li{
+    text-align: left;
+    width: 200px;
+    border-radius: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+    padding-left: 50px;
+    font-size: medium;
+}
+
+.top{
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    background-color: black;
+    width: 45px;
+    height: 40px;
+    border-style: none;
+    border-radius: 15px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-family: Times, serif, 'Times New Roman';
+}
+
+.list{
+    position: fixed;
+    bottom: 50px;
+    right: 5px;
+    background-color: black;
+    width: 45px;
+    height: 40px;
+    border-style:none;
+    border-radius: 15px;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    font-family: Times, 'Times New Roman', serif;
+}
+.card-image-left{
+    right: 5px;
+}
