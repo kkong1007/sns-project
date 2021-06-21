@@ -7,6 +7,9 @@ def showmain(request):
     return render(request, 'main/mainpage.html',{'posts':posts})
 def show(request):
     return render(request, 'main/show.html')
+def posts(request):
+    posts = Post.objects.all()
+    return render(request, 'main/posts.html', {'posts' : posts})
 def bucket(request):
     return render(request, 'main/bucket.html')
 def photo(request):
@@ -40,4 +43,4 @@ def update(request, id):
 def delete(request, id):
     delete_post = Post.objects.get(id = id)
     delete_post.delete()
-    return redirect('main:showmain')
+    return redirect('main:posts')
