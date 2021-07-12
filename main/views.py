@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect, get_object_or_404
-from .models import Post
+from .models import Post, Comment
 from django.utils import timezone
 # Create your views here.
 def showmain(request):
@@ -16,7 +16,8 @@ def photo(request):
     return render(request, 'main/photo.html')
 def detail(request,id):
     post = get_object_or_404(Post, pk = id)
-    return render(request, 'main/detail.html',{'post':post})
+    all_comments = post.comments.all().order_by('-created_at')
+    return render(request, 'main/detail.html',{'post':post, 'comments':all_comments})
 def new(request):
     return render(request, 'main/new.html')
 def create(request):
@@ -43,4 +44,27 @@ def update(request, id):
 def delete(request, id):
     delete_post = Post.objects.get(id = id)
     delete_post.delete()
+    return redirect('main:posts')
+
+def create_comment(request, post_id):
+	if request.method == "POST":
+		post = get_object_or_404(Post, pk=post_id)
+		current_user = request.user
+		comment_content = request.POST.get('content')
+		Comment.objects.create(content=comment_content, writer=current_user, post=post)
+	return redirect('main:detail', post_id)
+
+def edit_comment(request, post_id):
+    edit_comment = Comment.objects.get(id=post_id)
+    return render(request, 'main/edit_comment.html', {'comment':edit_comment})
+
+def update_comment(request, post_id):
+    update_comment = Comment.objects.get(pk=post_id)
+    update_comment.content = request.POST.get('content')
+    update_comment.save()
+    return redirect('main:detail', update_comment.post_id)
+
+def delete_comment(request, comment_id):
+    delete_comments = Comment.objects.get(id=comment_id)
+    delete_comments.delete()
     return redirect('main:posts')
