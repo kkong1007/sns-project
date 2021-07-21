@@ -2,8 +2,11 @@
 {% load static %}
 
 {% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gamja+Flower&display=swap');
+</style>
 <div class="container">
-    <h1>
+    <h1 style="font-family: 'Abril Fatface', cursive; margin-top: 30px;">
     {% if 'user' in user.username and user.username != 'user' %}
         {{ user.last_name }}{{ user.first_name }}
     {% else %}

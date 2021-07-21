@@ -2,14 +2,21 @@
 {% load static %}
 
 {% block content %}
+<style>
+    @import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+    @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+    @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+    @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gamja+Flower&display=swap');
+</style>
 <body id="top">
     
     <div class="banner">
-        <h1>Welcome!</h1>
-        <p id="intro">정민경은 누구일까요</p>
-        <a href="#list"><p id="start">start</p></a>
-        <a href="{% url 'main:bucket' %}" target="_blank"><p id="bucket list">bucket list</p></a>
-        <a href="{% url 'main:photo' %}" target="_blank"><p id="photo">photo</p></a>
+        <h1 style="font-family: 'Abril Fatface', cursive; font-size: 90px;">Welcome!</h1>
+        <p id="intro" style="font-family: 'Gamja Flower', cursive; font-size: 25px;">정민경은 누구일까요</p>
+        <a href="#list"><p id="start" style="font-family: 'Gamja Flower', cursive;">start</p></a>
+        <a href="{% url 'main:bucket' %}" target="_blank"><p id="bucket list" style="font-family: 'Gamja Flower', cursive; font-size: 25px;">bucket list</p></a>
+        <a href="{% url 'main:photo' %}" target="_blank"><p id="photo" style="font-family: 'Gamja Flower', cursive; font-size: 25px;">photo</p></a>
     </div>
 
 
@@ -82,13 +89,14 @@
             </ul>
         </div>
     
-    <a href="#top"><div class="top">top</div></a>
-    <a href="#list"><div class="list">list</div></a>
+    <a href="#top"><div class="top" style="font-family: 'Gamja Flower', cursive;">top</div></a>
+    <a href="#list"><div class="list" style="font-family: 'Gamja Flower', cursive;">list</div></a>
 </body>
 
-<h2><a href="{%url 'main:new'%}">글쓰기</a></h2>
+{% if user.is_authenticated %}
+<h2 style="font-family: 'Gamja Flower', cursive;"><a href="{%url 'main:new'%}">글쓰기</a></h2>
 
-<h1>글 목록</h1>
+<h1 style="font-family: 'Gamja Flower', cursive;">글 목록</h1>
 <div>
     {% for post in posts %}
     <div>
@@ -108,5 +116,5 @@
     </div>
     {%endfor%}
 </div>
-
+{% endif %}
 {% endblock %}

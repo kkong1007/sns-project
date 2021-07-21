@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block content %}
-
-<h1>{{post.title}}</h1>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gamja+Flower&display=swap');
+</style>
+<h1 style="font-family: 'Gamja Flower', cursive; margin-top:30px;">{{post.title}}</h1>
 {% if post.writer %}
     {% if 'user' in post.writer.username and post.writer.username != 'user' %}
         작성자 : <a href="{% url 'users:mypage' post.writer.id %}">{{ post.writer.last_name }} {{ post.writer.first_name }}</a>

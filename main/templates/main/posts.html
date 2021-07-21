@@ -2,9 +2,12 @@
 {% load static %}
 
 {% block content %}
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Gamja+Flower&display=swap');
+</style>
 <div class="container">
     {% if user.is_authenticated %}
-    <h1>글 목록</h1>
+    <h1 style="font-family: 'Gamja Flower', cursive; margin-top: 30px;">글 목록</h1>
 <div>
     {% for post in posts %}
     <div>
