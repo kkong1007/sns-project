@@ -19,4 +19,8 @@ urlpatterns = [
     path('update_comment/<str:comment_id>', update_comment, name="update_comment"),
     path('delete_comment/<str:comment_id>', delete_comment, name="delete_comment"),
 
+    # 1. like_toggle url 연결하기
+    path('like_toggle/<int:post_id>/', like_toggle,name="like_toggle"),
+    # 2. dislike
+    path('dislike_toggle/<int:post_id>/', dislike_toggle,name="dislike_toggle"),
 ]
